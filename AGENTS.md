@@ -19,18 +19,19 @@
 | ชั้น | ไฟล์หลัก |
 |---|---|
 | Rules | ไฟล์นี้ · `CLAUDE.md` · skill `public-site-safe` |
-| Context | `COURSE.md` · `docs/PROFILE.md` · `docs/DECISIONS.md` |
+| Context | `COURSE.md` · `docs/PROFILE.md` · `docs/DECISIONS.md` (Lab 02 สร้าง) |
 | State (Hot) | `docs/STATUS.md` · `docs/OPEN_LOOPS.md` |
 | Artifacts | `src/` · tests · `docs/QA.md` · PR |
 
 **Hot / Warm / Cold:** Hot = STATUS + OPEN_LOOPS + handoff ล่าสุด · Warm = PROFILE/DECISIONS/Ownership · Cold = `_cli-*` / logs เก่า  
-**Proposed vs Approved:** `DEBATE.md` = ยังไม่ปิด · `DECISIONS.md` = อนุมัติแล้วเท่านั้น
+**Proposed vs Approved:** `DEBATE.md` = ยังไม่ปิด · `DECISIONS.md` = อนุมัติแล้วเท่านั้น  
+**Seed state:** repo ที่ clone สดยังไม่มี `STATUS.md` / `OPEN_LOOPS.md` (มีแค่ `docs/*.md.example` — Lab 00 C6 คัดลอก) · `DECISIONS.md` / `DEBATE.md` เกิดใน Lab 02
 
 ### Start-of-session (≤ 8 บรรทัด)
 
 ก่อนเริ่มงานทุกครั้ง:
 
-1. อ่าน `docs/STATUS.md` และ `docs/OPEN_LOOPS.md`
+1. อ่าน `docs/STATUS.md` และ `docs/OPEN_LOOPS.md` (ถ้ายังไม่มี — seed ใหม่ ให้คัดลอกจาก `*.md.example` ก่อน)
 2. ถ้ามี handoff ล่าสุดใน `docs/handoffs/` ที่ส่งถึงคุณ — อ่านด้วย
 3. สรุปให้คนดู: Current goal · Latest D-id (ถ้ามี) · Open loops · Blockers — **ไม่เกิน 8 บรรทัด**
 4. ถ้าข้อมูลขัดแย้งระหว่างไฟล์ — หยุดวิเคราะห์ก่อนแก้โค้ด
@@ -93,17 +94,24 @@ harness = ความสามารถถาวรที่ Claude Code / Open
 - MCP = งานผลิต — **ไม่ใช่**ท่อระหว่างสอง CLI  
 - Swarm หยุดเมื่อ done **หรือ** ครบ **20 turns**
 
-## คำสั่งหลัก
+## คำสั่งหลัก + จุดที่เดาผิดกันง่าย
 
 ```powershell
-npm install
-npm run dev
-npm test
-npm run test:labs
-npm run build
-npm start
+npm install              # Node >= 22.12 (enforce ใน package.json)
+npm run dev              # astro dev — http://127.0.0.1:4321 (HOST/PORT จาก .env)
+npm test                 # Vitest tests/** — ไม่รวม tests/labs (CI รันชุดนี้ + build)
+npm run test:labs        # เฉพาะ tests/labs — ต้อง RED จนถึง Lab 05 (stubs ใน db.ts โยน NOT_IMPLEMENTED ตั้งใจ — อย่า "แก้" ล่วงหน้า)
+npm run test:e2e         # Playwright (โฟลเดอร์ playwright/) — ไม่มี webServer: ต้องรัน npm run dev ค้างไว้ก่อน หรือตั้ง PLAYWRIGHT_BASE_URL
+npm run build && npm start
 node scripts/create-course-issues.mjs
+powershell scripts/preflight.ps1   # ตรวจเครื่องมือ + ไฟล์ template ครบ
 ```
+
+- ตาราง SQLite (`site.sqlite`) สร้างเองที่ `DATA_DIR` (default `./data/`, gitignored) ครั้งแรกที่ `getDb()` ถูกเรียก — ไม่ต้อง migration script
+- Config ทุกตัวเป็น `.example` — Lab 00 คัดลอก: `opencode.json.example` → `opencode.json` · `.mcp.json.example` → `.mcp.json` · `.claude/settings.json.example` → `.claude/settings.json` (`.gitignore` ignore เฉพาะ `.mcp.json` — `opencode.json` และ `.claude/settings.json` ต้อง commit ตาม Lab 00 ส่วน D)
+- `.env`: copy จาก `.env.example` (`STUDENT_SLUG`, `SITE_URL`, `GITHUB_PERSONAL_ACCESS_TOKEN`) — ห้าม commit
+- CI (`.github/workflows/ci.yml`): `npm ci` → `npm test` → `npm run build` — **ไม่**รัน test:labs / e2e ใน CI
+- Env placeholder syntax ต่างกัน: `opencode.json` ใช้ `{env:VAR}` · `.mcp.json` ใช้ `${VAR}` — อย่าลอกสลับ
 
 ## ห้าม
 
