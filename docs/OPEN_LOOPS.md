@@ -3,13 +3,14 @@
 > งานค้างที่ยังไม่ปิด · ลบแถวเมื่อเสร็จ  
 > Owner = `Claude` | `OpenCode` | `human`
 
-Last updated: 2026-09-25 10:17 +07:00
+Last updated: 2026-09-25 10:30 +07:00
 
 | ID | Task | Owner | Priority | Trigger / due | Notes |
 |---|---|---|---|---|---|
-| L3 | Commit Lab 00 | human | P0 | Lab 00 D | add เฉพาะไฟล์ตาม Lab · ห้าม `.env` / `.mcp.json` / `settings.local.json` · เลือกได้ว่าจะ add `.claude/agent-memory/` |
-| L4 | `src/lib/profile.ts` regex ใช้ flag `m` → `$` จบท้ายบรรทัดแรก · Bio / Interests ถูกตัดเหลือบรรทัดแรก | Claude | P1 | Lab 04 | ยืนยันแล้วใน template 2026-09-25 (บรรทัด 42) |
-| L5 | แจ้งวิทยากร: lockfile `hasInstallScript` (better-sqlite3) · `preflight.ps1` encoding · prompt smoke C3 ถาม `@backend` แต่ backend เป็น primary | human | P2 | ก่อน Lab 01 | branch `fix/npm-direct-launcher` มีงานแก้ setup แยกไว้ |
+| L4 | `src/lib/profile.ts` regex ใช้ flag `m` → `$` จบท้ายบรรทัดแรก · Bio / Interests ถูกตัดเหลือบรรทัดแรก | Claude | P1 | Lab 04 | ยืนยันกับ PROFILE จริง 2026-09-25: Bio 4→1 ย่อหน้า · Interests 4→1 ข้อ (บรรทัด 42) |
+| L5 | แจ้งวิทยากร: lockfile `hasInstallScript` (better-sqlite3) · `preflight.ps1` encoding · prompt smoke C3 ถาม `@backend` แต่ backend เป็น primary | human | P2 | ก่อน Lab 02 | branch `fix/npm-direct-launcher` มีงานแก้ setup แยกไว้ |
+| L6 | Guestbook เป็น Must หรือ Nice | human | P2 | Lab 02 | Brainstorm เสนอ Nice (moderation + จำกัดความยาว) · ถกใน `DEBATE.md` |
+| L7 | รูปโปรไฟล์สำหรับหน้าเว็บ | human | P2 | Lab 04 | เตรียมรูปของตัวเอง (ไม่ใช้รูปจากเว็บอื่น) |
 
 ## ปิดแล้ว (ย่อ — ย้ายหรือลบได้เมื่อรก)
 
@@ -17,6 +18,7 @@ Last updated: 2026-09-25 10:17 +07:00
 |---|---|---|
 | L1 | สร้าง STATUS + OPEN_LOOPS จาก example | 2026-09-25 |
 | L2 | Consistency check Claude ↔ OpenCode — สรุปตรงกันจากไฟล์ | 2026-09-25 |
+| L3 | Commit Lab 00 (`cb4f4ac` · pushed) | 2026-09-25 |
 
 ## กฎสั้น
 
