@@ -4,12 +4,12 @@
 ศิรวุฒิ จันทแสงสว่าง (Sirawut Chanthasangsawang)
 
 ## Headline
-IT Manager ผู้นำทีม Web App Development ที่ TPI Polene — 20 ปีจากงาน Infrastructure สู่การพัฒนาระบบและนำ AI มาใช้ในองค์กร
+IT Application Manager ผู้นำทีมพัฒนา Web & Application และขับเคลื่อนธุรกิจด้วยไอทีที่ TPI Polene PCL — 20 ปีจากงาน Infrastructure สู่การพัฒนาระบบและนำ AI มาใช้ในองค์กร
 
 ## Bio
-ผมทำงานสายไอทีมาราว 20 ปี เริ่มจากงาน Infrastructure — ดูแล Data Center, Windows Server, Active Directory และเครือข่าย Cisco ให้ระบบขององค์กรทำงานได้ไม่สะดุด ผ่านงานที่ Ananda Development และ Origin Property
+ผมทำงานสายไอทีมาราว 20 ปี เริ่มจากงาน Infrastructure — ดูแล Data Center, Windows Server, Active Directory และเครือข่าย Cisco ให้ระบบขององค์กรทำงานได้ไม่สะดุด ผ่านงานในบริษัทมหาชนจดทะเบียนในตลาดหลักทรัพย์ฯ มาแล้ว 3 แห่ง — Ananda Development PCL, Origin Property PCL และปัจจุบันที่ TPI Polene PCL
 
-ที่ Origin Property ผมดูแลงาน System IT ในตำแหน่ง SVP ได้พัฒนาแอป Origin Connect TH สำหรับลูกบ้าน และเคยนำทีมรับมือเหตุ ransomware ในปี 2022 จนกู้ระบบทั้งหมดกลับมาได้ภายในไม่กี่ชั่วโมง — ประสบการณ์ที่ย้ำว่าระบบที่ดีต้องพร้อมฟื้นตัวเสมอ
+ที่ Origin Property ผมดูแลงานไอทีในตำแหน่ง Senior Vice President ฝ่าย Information Technology ได้พัฒนาแอป Origin Connect TH สำหรับลูกบ้าน และเคยนำทีมรับมือเหตุ ransomware ในปี 2022 จนกู้ระบบทั้งหมดกลับมาได้ภายในไม่กี่ชั่วโมง — ประสบการณ์ที่ย้ำว่าระบบที่ดีต้องพร้อมฟื้นตัวเสมอ
 
 วันนี้ที่ TPI Polene ผมเปลี่ยนจากสาย Infra มาเป็นสาย Dev ดูแลทีม Web App Development ทำงานร่วมกับผู้บริหารระดับสูงเพื่อวางแนวทางไอทีให้ทันสมัย พัฒนา report สำหรับผู้บริหาร และนำ AI เข้ามาใช้งานในบริษัท ยังสนุกกับงานอยู่ เพราะทุกวันนี้มี AI มาช่วยทำงานได้เยอะมาก
 
@@ -32,6 +32,7 @@ IT Manager ผู้นำทีม Web App Development ที่ TPI Polene —
 ## Tone
 - สีหลัก / บรรยากาศ: Corporate น่าเชื่อถือ — น้ำเงินเข้ม · เทา · ขาว
 - น้ำเสียง: มืออาชีพแต่อ่านสบาย
+- เสียงผู้เขียน: ใช้ "ผม" · ประโยคสั้น · คำไทยเป็นหลัก ศัพท์อังกฤษเฉพาะที่วงการใช้จริง (AI, Dev, Infra) · buzzword อยู่ในการ์ด Interests เท่านั้น
 
 ## ไม่แสดงบนเว็บ
 - เบอร์โทร · ที่อยู่ · อีเมลส่วนตัว/บริษัท · ข้อมูลภายในบริษัท (ชื่อระบบ ตัวเลข ชื่อผู้บริหาร) · รายละเอียดเทคนิค ransomware เกินข่าวสาธารณะ
