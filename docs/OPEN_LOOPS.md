@@ -3,7 +3,7 @@
 > งานค้างที่ยังไม่ปิด · ลบแถวเมื่อเสร็จ  
 > Owner = `Claude` | `OpenCode` | `human`
 
-Last updated: 2026-09-25 (Lab 02)
+Last updated: 2026-09-25 11:55 +07:00
 
 | ID | Task | Owner | Priority | Trigger / due | Notes |
 |---|---|---|---|---|---|
@@ -11,6 +11,7 @@ Last updated: 2026-09-25 (Lab 02)
 | L5 | แจ้งวิทยากร: lockfile `hasInstallScript` (better-sqlite3) · `preflight.ps1` encoding · prompt smoke C3 ถาม `@backend` แต่ backend เป็น primary | human | P2 | ก่อน Lab 02 | branch `fix/npm-direct-launcher` มีงานแก้ setup แยกไว้ |
 | L8 | ประโยค "มุมมอง" ของการ์ด Interests (รูปแบบ `- หัวข้อ — มุมมอง`) | human | P3 | ก่อน/ระหว่าง Lab 04 | DECISIONS D10 — ไม่มีก็ ship หัวข้ออย่างเดียว · agent ห้ามแต่ง |
 | L9 | ข้อมูล LinkedIn เพิ่มเติม (About · Experience · Skills) | human | P3 | ก่อน Lab 04 | LinkedIn บล็อกการอ่านอัตโนมัติ (HTTP 999) · ใช้แล้วเฉพาะชื่อตำแหน่งจากผลค้นหาสาธารณะ · ถ้าต้องการใช้มากกว่านี้ให้ human วางข้อความเอง |
+| L10 | จัดการ PAT: ลบ token ที่ไม่ใช้ (ตัวเก่าหมดอายุ Oct 24 + ตัวที่ไม่ได้ใช้) · token ปัจจุบันยังเข้าถึง `9expert` ด้วย — ตัดออกถ้าไม่จำเป็น · User env ยังเป็น token เก่า | human | P1 | ก่อน Lab 05 | ใช้ `.env` เป็นหลัก · ห้ามวาง token ในแชท/issue |
 | L7 | รูปโปรไฟล์สำหรับหน้าเว็บ | human | P2 | Lab 04 | เตรียมรูปของตัวเอง (ไม่ใช้รูปจากเว็บอื่น) |
 
 ## ปิดแล้ว (ย่อ — ย้ายหรือลบได้เมื่อรก)

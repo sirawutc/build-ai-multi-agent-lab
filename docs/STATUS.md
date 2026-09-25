@@ -3,12 +3,12 @@
 > อ่านทุก session · **สั้น** · single-writer ต่อรอบ  
 > ดู [`COURSE.md`](../COURSE.md) ชั้น State (Hot)
 
-Last updated: 2026-09-25 (Lab 02)  
+Last updated: 2026-09-25 11:55 +07:00  
 Updated by: human (via Claude)
 
 ## Current goal
 
-- Lab 02 เสร็จ (ยังไม่ commit) · Latest D-id = **D13** · ถัดไป Lab 03 (Issues)
+- Lab 03 เสร็จ · Latest D-id = **D13** · Issues #1–#6 (MCP) · ถัดไป Lab 04 (Frontend · issues #1–#4, #6 ฝั่ง UI)
 
 ## Done
 
@@ -16,6 +16,8 @@ Updated by: human (via Claude)
 - Lab 01: `docs/PROFILE.md` จากสัมภาษณ์ 9 ข้อ (Name / Headline / Bio 4 ย่อหน้า / Audience / Interests 4 ข้อ / Contact `demo@example.com` / Tone Corporate น้ำเงินเข้ม·เทา·ขาว) + `## Brainstorm` (Proposed · Must 4 / Nice 4 / Later 3 · About angle A/B/C · สิ่งที่ต้องเลี่ยง)
 
 - Lab 02: `docs/DEBATE.md` (Brand / UX / Devil) → `docs/DECISIONS.md` D1–D13 · human ตัดสิน D1–D5 (CTA ฟอร์ม + PDPA · แกน Resilience + AI · Guestbook ลิงก์ footer · Bio คงเดิม) · PROFILE แก้ Headline (D6 · human: แยก Web & Application + พัฒนาธุรกิจด้านไอที) + Tone (D7)
+
+- Lab 03: issues #1–#6 ผ่าน GitHub MCP · draft #7 ผ่าน `gh` (ปิดแล้ว) · `## Lab 03` ใน DECISIONS (ตาราง issue + MCP vs gh)
 
 ## In progress
 
@@ -27,13 +29,12 @@ Updated by: human (via Claude)
 
 ## Next actions
 
-1. Commit Lab 02 (`DEBATE.md` · `DECISIONS.md` · `PROFILE.md` · hot state)
-2. Lab 03 — issues จาก DECISIONS · เกณฑ์พร้อม Lab 04 อยู่ท้าย `DECISIONS.md`
-3. ก่อน Lab 03: `gh` พร้อมแล้ว · MCP github ต้องเปิด `claude` ใน terminal ที่มี `GITHUB_PERSONAL_ACCESS_TOKEN`
+1. Lab 04 — frontend ปิด #1 #2 #3 #4 (+ UI ของ #6) · เริ่มจากแก้ parser (L4)
+2. ลบ PAT ที่ไม่ใช้ (L10)
 
 ## Files changed in latest session
 
-- `docs/DEBATE.md` · `docs/DECISIONS.md` · `docs/PROFILE.md` · `docs/STATUS.md` · `docs/OPEN_LOOPS.md`
+- `docs/DECISIONS.md` (Lab 03) · `docs/STATUS.md` · `docs/OPEN_LOOPS.md` · `.env` (local · PAT ใหม่)
 
 ## Notes
 

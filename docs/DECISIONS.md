@@ -49,3 +49,24 @@ Brand Strategist เสนอให้เลือกแกนเดียวค
 - `## Tone` — เพิ่ม bullet "เสียงผู้เขียน" ตาม D7
 - `## Bio` — ย่อหน้าแรกระบุบริษัทมหาชน 3 แห่ง + PCL (D5) · เนื้อหาอื่นไม่แก้
 - `## Contact` · หัวข้ออื่น — ไม่แก้ (D9 จัดการที่ชั้น render)
+
+## Lab 03 — Issues จาก DECISIONS
+
+| Issue # | Title | มาจาก Decision | Owner · ปิดใน |
+|---|---|---|---|
+| [#1](https://github.com/sirawutc/build-ai-multi-agent-lab/issues/1) | [D3][D5][D6] Hero + About ตาม PROFILE (Resilience + AI) | D3 · D5 · D6 · D7 (+ แก้ parser L4) | Claude `frontend` · Lab 04 |
+| [#2](https://github.com/sirawutc/build-ai-multi-agent-lab/issues/2) | [D8][D9][D11] Nav 4 หน้า · ไม่แสดงอีเมล · footer disclaimer | D8 · D9 · D11 | Claude `frontend` · Lab 04 |
+| [#3](https://github.com/sirawutc/build-ai-multi-agent-lab/issues/3) | [D10] การ์ด Interests จาก PROFILE (agent ห้ามแต่งมุมมอง) | D10 | Claude `frontend` · Lab 04 |
+| [#4](https://github.com/sirawutc/build-ai-multi-agent-lab/issues/4) | [D1][D2][D12] ฟอร์ม Contact เป็น CTA หลัก + PDPA + microcopy 2xx/400/501 | D1 · D2 · D12 | Claude `frontend` · Lab 04 |
+| [#5](https://github.com/sirawutc/build-ai-multi-agent-lab/issues/5) | [D1][D2] Contact API บันทึกลง SQLite + validation | D1 · D2 | OpenCode `backend` · Lab 05 |
+| [#6](https://github.com/sirawutc/build-ai-multi-agent-lab/issues/6) | [D4] Guestbook ลิงก์ footer + จำกัด 80/500 + escape HTML | D4 | frontend (Lab 04) + backend (Lab 05) |
+
+#1–#6 สร้างผ่าน **GitHub MCP** (headless `claude -p --allowedTools mcp__github`) · #7 = draft ทดลอง `gh` (ปิดแล้ว · not planned)
+
+## Lab 03 — MCP vs gh
+
+- **ความเร็ว:** `gh issue create` สร้าง + ได้ URL ใน ~3 วินาที (คำสั่งเดียว) · MCP ช้ากว่าเพราะผ่านโมเดล แต่ทำ 6 ใบ + list เช็กซ้ำ + ตาราง ได้ในรอบเดียวจาก prompt
+- **สิทธิ์:** `gh` ใช้ OAuth (`gh auth login` · scope `repo`) · MCP ใช้ fine-grained PAT จาก env (`GITHUB_PERSONAL_ACCESS_TOKEN`) — ต้องเลือก repo + ตั้ง **Issues / Pull requests = Read and write** เอง · repo ที่สร้างใหม่ชื่อเดิม = คนละ repo (id ใหม่) ต้องเลือกใหม่ใน PAT
+- **Audit trail:** ทั้งคู่ขึ้นเป็น user `sirawutc` บน GitHub · `gh` มีประวัติใน shell · MCP มีบันทึกในแชท/transcript ว่า prompt ไหนสั่ง — แนบ D-id ใน title ช่วยย้อนหาได้ทั้งสองทาง
+- **ข้อผิดพลาดที่เจอ:** MCP ได้ `403 Resource not accessible by personal access token` หลายรอบ — PAT ชี้ repo เก่า · แก้สิทธิ์ผิด token · วาง token แล้วบรรทัดใน `.env` ติดกับคอมเมนต์บรรทัดถัดไป · ตรวจก่อนสร้างด้วย POST ว่าง (ได้ 422 = มีสิทธิ์ · 403 = ไม่มี) ไม่ต้องสร้าง issue ทิ้ง
+- **เมื่อไหร่ใช้อะไร:** งานหลายใบที่ต้องอ่าน `DECISIONS.md` แล้วแปลงเป็น body/checklist → MCP ในแชท · งานใบเดียว / script ซ้ำได้ / ตรวจผล (`gh issue list`) / ปิด issue → `gh` · MCP ใช้กับงานผลิตเท่านั้น ไม่ใช่ท่อ Claude ↔ OpenCode
